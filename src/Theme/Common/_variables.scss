@@ -1,0 +1,31 @@
+$body-font: 'Montserrat', sans-serif;
+
+$font-size-ss:12px;
+$font-size-sm:14px;
+$font-size-sl:16px;
+$font-size-ms:18px;
+$font-size-mm:22px;
+$font-size-ml:24px;
+$font-size-ls:28px;
+$font-size-lm:32px;
+$font-size-ll:36px;
+$font-size-lxl:48px;
+
+$line-height-l:$font-size-lxl;  //48
+$line-height-m:$font-size-ll;   //36
+$line-height-sm:$font-size-ls;  //28
+$line-height-s:$font-size-ml;   //24
+$line-height-ss:$font-size-ms;  //18
+
+
+$black:#444;
+$white: #fff;
+$grey: #ccc;
+$blue: #4286b0;
+$lightBlue: #ecf0f1;
+$lightGrey: #999;
+
+$body-font-size:$font-size-sm;  //14
+$line-height:$font-size-ml;     //24
+$body-bg-color:$white;
+$border-color:$grey;

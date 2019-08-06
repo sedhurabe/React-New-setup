@@ -1,0 +1,53 @@
+@import '../Common/importer';
+
+.buttonRow{
+    @include border-radius(25px);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color:$blue;
+    display:inline-block;
+    position: relative;
+    text-align: center;
+    max-width:200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width:100%;
+        button{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            color:$white;
+            text-transform: uppercase;
+            font-size:$font-size-sl;
+            font-weight:500;
+            letter-spacing: 0.5px;
+            line-height:$line-height;
+            height:50px;
+            width:100%;
+            padding:15px;
+            &:focus{
+                outline: none
+            }
+        }
+    .loaderRow{
+        background-color:$blue;
+        position: absolute;
+        height: 50px;
+        left:0;
+        top:0;
+        width:100%;
+        padding: 15px;
+    }
+    &-Full{
+        max-width: 100%;
+    }
+    &-disabled{
+        background-color: $grey
+    }
+    &-secondary{
+        background-color:$lightBlue;
+            button{
+                color:$lightGrey
+            }
+    }
+}

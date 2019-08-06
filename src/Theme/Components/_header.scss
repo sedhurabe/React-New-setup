@@ -1,0 +1,8 @@
+@import '../Common/importer';
+
+header{
+    background-color: $lightBlue;
+    @include width-height(100%, 100px);
+    padding-left: 100px;
+    position: relative;
+}

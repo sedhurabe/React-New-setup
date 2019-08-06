@@ -1,0 +1,50 @@
+@import '../Common/importer';
+
+.select-menu {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 15px;
+  width:100%;
+  &-trigger{
+    border: 1px solid $grey;
+    padding:15px 50px 15px 15px;
+    position: relative;
+    @include width-height(100%, 50px);
+    text-transform: capitalize;
+    &:after{
+      border: solid $grey;
+      border-width: 0 1px 1px 0;
+      content:"";
+      margin-top: -7px;
+      @include transform(rotate(45deg));
+      @include width-height(10px, 10px);
+      @include position(absolute, $top: 50%, $right:22px);
+    }
+  }
+  &-list{
+    background-color: $white;
+    border: 1px solid $grey;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    @include transition-property(all);
+    @include transition-duration(0.2s);
+    @include transition-timing-function(ease-in);
+    @include width-height(100%, 200px);
+    @include position(absolute, $top: 70px, $left:0px);
+    li{
+      padding:15px;
+      border-bottom:1px solid $grey;
+      text-align: left;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+    &-active{
+      opacity: 1;
+      visibility: visible;
+      top:52px;
+    }
+  }
+}

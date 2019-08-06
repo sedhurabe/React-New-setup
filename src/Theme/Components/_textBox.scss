@@ -1,0 +1,21 @@
+@import '../Common/importer';
+
+.inputRow{
+    position: relative;
+}
+.inputBox{
+    border:1px solid $border-color;
+    width: 100%;
+    padding:15px;
+    margin-bottom:15px;
+    &-TextBox{
+        height: 50px;
+    }
+    &-TextArea{
+        height: 100px;
+        resize: none
+    }
+    &:focus{
+        outline: none
+    }
+}

@@ -1,0 +1,70 @@
+@import '../Common/importer';
+
+.radioRow{
+        margin-bottom:15px;
+        padding-right: 15px;
+    label{
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        padding-left: 35px;
+        input{
+            opacity: 0;
+            position: absolute;
+            cursor: pointer;
+            width:0;
+            height: 0;
+        }
+        .radio{
+            &:before{
+                content:"";
+                @include border-radius(100px);
+                @include transition-property(all);
+                @include transition-duration(0.3s);
+                @include transition-timing-function(ease-in);
+                border:5px solid $grey;
+                position: absolute;
+                width:25px;
+                height: 25px;
+                left:0;
+                top:0;
+            }
+        }
+        input:checked ~ .radio:before{
+            background-color: $blue;
+        }
+        .checkbox{
+            &:before{
+                content:"";
+                border:5px solid $grey;
+                position: absolute;
+                width:25px;
+                height: 25px;
+                left:0;
+                top:0;
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                opacity: 0;
+                @include transition-property(all);
+                @include transition-duration(0.3s);
+                @include transition-timing-function(ease-in);
+            }
+        }
+        input:checked ~ .checkbox:before{
+            border:5px solid $blue;
+            background-color: $blue;
+        }
+        input:checked ~ .checkbox:after{
+            opacity: 1;
+            left: 9px;
+            top: 7px;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            @include transform(rotate(45deg));
+        }
+    }
+}

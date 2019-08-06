@@ -1,0 +1,9 @@
+{
+    "content": "hello world",
+    "fileName": "File Name",
+    "view":"View",
+    "preview":"Preview",
+    "noDataFound":"No Data Found",
+    "sNo": "S.No",
+    "buttonLabel": "Submit"
+}

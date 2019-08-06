@@ -1,0 +1,23 @@
+@import '../Common/importer';
+
+.loader {
+    border: 3px solid $lightGrey;
+    border-radius: 50%;
+    border-top: 3px solid $blue;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite; /* Safari */
+    animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    margin:0 auto;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

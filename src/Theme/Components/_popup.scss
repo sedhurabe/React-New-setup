@@ -1,0 +1,33 @@
+@import '../Common/importer';
+
+.popup-wrapper{
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    @include width-height(100%, 100%);
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include transition-property(all);
+    @include transition-duration(0.5s);
+    @include transition-timing-function(ease-in);
+    top: 0;
+    left:0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    &-active{
+        opacity: 1;
+        visibility: visible;
+    }
+    &-row{
+        background-color: $white;
+        padding:30px;
+        max-width: 800px;
+        width: 100%;
+        height: calc(100vH - 100px);
+        position: relative;
+        &-small{
+            max-width:540px;
+        }
+    }
+}

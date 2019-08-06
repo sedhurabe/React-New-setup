@@ -1,0 +1,22 @@
+@import '../Common/importer';
+
+nav{
+    background-color: $white;
+    height: 100%;
+    position: absolute;
+    padding:30px;
+    left:0;
+    width: calc(100% - 200px);
+    top:0;
+    z-index: 99;
+    li{
+        border-bottom: 1px solid $lightGrey;
+        font-size: $font-size-ms;
+        font-weight: 300;
+        padding-top:13px;
+        padding-bottom:9px;
+        &:first-child{
+            padding-top: 0;
+        }
+    }
+}
